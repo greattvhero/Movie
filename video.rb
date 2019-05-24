@@ -18,4 +18,11 @@ class Video
   end
 end
 
+
 class Film < Video
+  attr_accessor :colors
+
+    def colors
+      @colors = colors
+    end
+end
