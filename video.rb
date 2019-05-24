@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Movie
+class Video
   attr_accessor :link, :movie, :year, :country, :showing, :jenre,
                 :length, :value, :director, :actor
 
@@ -17,3 +17,5 @@ class Movie
     @actor = actor
   end
 end
+
+class Film < Video

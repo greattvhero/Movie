@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # movie operations class
-class MovieCollection
+class VideoCollection
   attr_accessor :file
 
   def initialize(file)
