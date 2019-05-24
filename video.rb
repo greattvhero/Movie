@@ -17,12 +17,3 @@ class Video
     @actor = actor
   end
 end
-
-
-class Film < Video
-  attr_accessor :colors
-
-    def colors
-      @colors = colors
-    end
-end
