@@ -4,7 +4,7 @@ class Video
   attr_accessor :link, :movie, :year, :country, :showing, :jenre,
                 :length, :value, :director, :actor
 
-  def initialize(link, movie, year, country, showing, jenre, length, value, director, actor)
+  def initialize(link:, movie:, year:, country:, showing:, jenre:, length:, value:, director:, actor:)
     @link = link
     @movie = movie
     @year = year
