@@ -13,8 +13,10 @@ class VideoCollection
   def read_file
     File.readlines(@file).each do |line|
       params = line.split('|')
-      new_movie = ::Video.new(link: 0, movie: 1, year: 2, country: 3,
-        showing: 4, jenre: 5, length: 6, value: 7, director: 8, actor: 9)
+      new_movie = ::Video.new(link: params[0], movie: params[1], year: params[2],
+         country: params[3],
+        showing: params[4], jenre: params[5], length: params[6], value: params[7],
+        director: params[8], actor: params[9])
       @movies.push(new_movie)
     end
   end
