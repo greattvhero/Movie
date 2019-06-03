@@ -3,5 +3,4 @@
 require_relative 'video'
 require_relative 'film'
 require_relative 'video_collection'
-movie = Film.new('movies.txt')
-movie.initialize
+movie = Film.new
