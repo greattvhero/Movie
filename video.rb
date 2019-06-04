@@ -2,9 +2,18 @@
 
 class Video
   attr_accessor :link, :movie, :year, :country, :showing, :jenre,
-                :length, :value, :director, :actor, colors:
+                :length, :value, :director, :actor
 
-  def initialize(link:, movie:, year:, country:, showing:, jenre:, length:, value:, director:, actor:, colors:)
-    puts #{link} #{movie) #{year} #{country} #{showing} #{jenre} #{length} #{value} #{director} #{actor} #{colors}
+  def initialize(link:, movie:, year:, country:, showing:, jenre:, length:, value:, director:, actor:, **)
+    @link = link
+    @movie = movie
+    @year = year
+    @country = country
+    @showing = showing
+    @jenre = jenre.split(',')
+    @length = length
+    @value = value
+    @director = director
+    @actor = actor
   end
 end
