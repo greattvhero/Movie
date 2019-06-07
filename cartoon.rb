@@ -22,3 +22,4 @@ class Cartoons < Video
                 else
                   @dimension = "This animated movie is 2D"
                   puts @dimension]
+    end
