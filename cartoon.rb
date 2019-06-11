@@ -5,7 +5,7 @@ class Cartoon < Video
 
   def initializel(link:, movie:, year:, country:, showing:, jenre:, length:, value:, director:, actor:, dimension:)
     super
-    @dimension = dimension
-    @dimension = ["2D","3D"]
+    DIMENSION = dimension
+    DIMENSION = ["2D","3D"]
   end
 end
