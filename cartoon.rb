@@ -8,7 +8,7 @@ class Cartoon < Video
     super
     if dimension == "2D" || "3D"
       unless DIMENSION.include?(dimension)
-        raise fail ArgumentError, "dimension is not valid"
+        raise ('fail ArgumentError, "dimension is not valid"')'
       end
     end
   end
