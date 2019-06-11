@@ -5,6 +5,7 @@ class Cartoon < Video
   DIMENSION = ["2D","3D"]
 
   def initializel(link:, movie:, year:, country:, showing:, jenre:, length:, value:, director:, actor:, dimension:)
-    super  
+    super
+    DIMENSION.include?(dimension)
   end
 end
