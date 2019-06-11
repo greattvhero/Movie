@@ -2,10 +2,9 @@ require_relative 'video'
 
 class Cartoon < Video
   attr_accessor :dimension
-  DIMENSION = dimension
+  DIMENSION = ["2D","3D"]
 
   def initializel(link:, movie:, year:, country:, showing:, jenre:, length:, value:, director:, actor:, dimension:)
-    super
-    DIMENSION = ["2D","3D"]
+    super  
   end
 end
