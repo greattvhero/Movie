@@ -6,10 +6,9 @@ class Cartoon < Video
 
   def initializel(link:, movie:, year:, country:, showing:, jenre:, length:, value:, director:, actor:, dimension:)
     super
-    if dimension == "2D" || "3D"
-      if DIMENSION.include?(dimension)
+    dimension = DIMENSION
+      if dimension.include?(DIMENSION)
         raise ('fail ArgumentError, "dimension is not valid"')
       end
-    end
   end
 end
