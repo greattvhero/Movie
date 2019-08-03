@@ -25,6 +25,16 @@ class VideoCollection
     @movies
   end
 
+  def add
+    class Adding < Film
+
+    def initialize(link:, movie:, year:, country:, showing:, jenre:, length:, value:, director:, actor:, colors:)
+      super
+      @massive_objects = [link, movie, year, country, showing, jenre, length, value, director, actor, colors]
+    end
+    end
+  end
+
   def sort_by(year)
     @movies.sort_by { |movie| movie.send(year) }
   end
