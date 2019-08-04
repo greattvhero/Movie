@@ -3,8 +3,8 @@ require_relative 'video'
 class Film < Video
   attr_accessor :colors
 
-  def initialize(link:, movie:, year:, country:, showing:, jenre:, length:, value:, director:, actor:, colors:)
+  def initialize(link:, movie:, year:, country:, showing:, jenre:, length:, value:, director:, actor:, object:)
     super
-    @colors = colors
+    @object = object
   end
 end

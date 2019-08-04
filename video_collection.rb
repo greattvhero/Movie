@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # movie operations class
-class VideoCollection < Film
+class VideoCollection
   attr_accessor :file
 
   def initialize(file)
@@ -16,7 +16,7 @@ class VideoCollection < Film
       new_movie = ::Video.new(link: params[0], movie: params[1], year: params[2],
          country: params[3],
         showing: params[4], jenre: params[5], length: params[6], value: params[7],
-        director: params[8], actor: params[9], colors: params[10])
+        director: params[8], actor: params[9], object: params[10])
       @movies.push(new_movie)
     end
   end
@@ -25,8 +25,8 @@ class VideoCollection < Film
     @movies
   end
 
-  def add(colors)
-    @movies.each {|movie| movie.send(colors)}
+  def add(object)
+    @movies.push(object)
   end
 
   def sort_by(year)
