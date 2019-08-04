@@ -27,6 +27,7 @@ class VideoCollection
 
   def add(colors)
     class Video
+      @massive_objects = [colors]
       @massive_objects.sort_by {|color| color.send(colors)}
     end
   end
