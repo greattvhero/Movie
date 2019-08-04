@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # movie operations class
-class VideoCollection
+class VideoCollection < Film
   attr_accessor :file
 
   def initialize(file)
@@ -26,10 +26,7 @@ class VideoCollection
   end
 
   def add(colors)
-    class Video
-      @massive_objects = [colors]
-      @massive_objects.sort_by {|color| color.send(colors)}
-    end
+    @movies.each {|movie| movie.send(colors)}
   end
 
   def sort_by(year)
