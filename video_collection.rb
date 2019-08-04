@@ -16,7 +16,7 @@ class VideoCollection
       new_movie = ::Video.new(link: params[0], movie: params[1], year: params[2],
          country: params[3],
         showing: params[4], jenre: params[5], length: params[6], value: params[7],
-        director: params[8], actor: params[9], object: params[10])
+        director: params[8], actor: params[9], colors: params[10])
       @movies.push(new_movie)
     end
   end
