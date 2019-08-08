@@ -17,4 +17,4 @@ puts calculator.sum(16,4).inspect
 puts calculator.div(16,4).inspect
 puts calculator.multiply(16,4).inspect
 puts calculator.substract(16,4).inspect
-puts calculator.eql(4,4).inspect
+puts calculator.eql(5,4).inspect

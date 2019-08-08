@@ -1,42 +1,31 @@
 class Calculator
 
+def check_types!(x,y)
+  raise ArgumentError, 'not a number' if x.class != Integer && y.class != Integer
+  end
+end
+
   def sum(x,y)
-    if x.class == Integer && y.class == Integer
+    check_types!(x,y)
       x + y
-    else
-      raise ArgumentError, 'not a number'
-    end
   end
 
   def div(x,y)
-    if x.class == Integer && y.class == Integer
+    check_types!(x,y)
       x / y
-    else
-      raise ArgumentError, 'not a number'
-    end
   end
 
   def multiply(x,y)
-    if x.class == Integer && y.class == Integer
+    check_types!(x,y)
       x * y
-    else
-      raise ArgumentError, 'not a number'
-    end
   end
 
   def substract(x,y)
-    if x.class == Integer && y.class == Integer
+    check_types!(x,y)
       x - y
-    else
-      raise ArgumentError, 'not a number'
-    end
   end
 
   def eql(x,y)
-    if x == y
-      true
-    else
-      false
-    end
+    x == y
   end
 end
