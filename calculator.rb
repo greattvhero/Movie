@@ -24,7 +24,7 @@ class Calculator
     x == y
   end
 
-def check_types!(x,y)
+  def check_types!(x,y)
   raise ArgumentError, 'not a number' if x.class != Integer && y.class != Integer
   end
 end
