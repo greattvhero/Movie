@@ -1,10 +1,5 @@
 class Calculator
 
-def check_types!(x,y)
-  raise ArgumentError, 'not a number' if x.class != Integer && y.class != Integer
-  end
-end
-
   def sum(x,y)
     check_types!(x,y)
       x + y
@@ -28,4 +23,8 @@ end
   def eql(x,y)
     x == y
   end
+
+def check_types!(x,y)
+  raise ArgumentError, 'not a number' if x.class != Integer && y.class != Integer
+end
 end
