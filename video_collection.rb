@@ -53,15 +53,17 @@ class VideoCollection
     end
   end
 
-  def cartoons(object)
-    @movies.select {|cartoon| cartoon.movie.include?(object)}
+  def cartoons(cartoon)
+    @movies.select {|cartoon| cartoon.jenre.include?("Animation")}
   end
 
-  def films(object)
-    @movies.select {|films| films.movie.include?(object)}
+  def films(movie)
+    @movies.select {|films| films.movie.include?(movie)}
+  end
 
-  def series(object)
-    @movies.select {|series| series.movie.include?(object)}
+  def series(series)
+    @movies.select {|series| series.jenre.include?("TV"
+    end
 
   def my_method
     my_hash = {}
