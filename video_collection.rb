@@ -53,16 +53,16 @@ class VideoCollection
     end
   end
 
-  def cartoons(cartoon)
-    @movies.select {|movie| movie.jenre.include?("Animation") && movie.send(cartoon) == Cartoon}
+  def cartoons
+    @movies.select {|movie| movie.class == Cartoon}
   end
 
-  def films(movie)
-    @movies.select {|movie| films.movie.include?("The Dark Knight") && movie.send(colors) == Film}
+  def films
+    @movies.select {|movie| movie.class == Film}
   end
 
   def series(series)
-    @movies.select {|movie| series.jenre.include?("TV") && movie.send(series) == Series}
+    @movies.select {|movie| movie.class == Series}
     end
 
   def my_method
