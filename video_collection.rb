@@ -16,7 +16,7 @@ class VideoCollection
       new_movie = ::Video.new(link: params[0], movie: params[1], year: params[2],
          country: params[3],
         showing: params[4], jenre: params[5], length: params[6], value: params[7],
-        director: params[8], actor: params[9], colors: params[10], seasons: params[11])
+        director: params[8], actor: params[9], colors: params[10])
       @movies.push(new_movie)
     end
   end
@@ -58,11 +58,11 @@ class VideoCollection
   end
 
   def films(movie)
-    @movies.select {|films| films.movie.include?(movie)}
+    @movies.select {|films| films.movie.include?("The Dark Knight")}
   end
 
-  def series(seasons)
-    @movies.select {|series| series.seasons.include?(seasons)
+  def series(series)
+    @movies.select {|series| series.jenre.include?("TV")
     end
 
   def my_method
