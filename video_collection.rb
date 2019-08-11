@@ -61,7 +61,7 @@ class VideoCollection
     @movies.select {|movie| movie.class == Film}
   end
 
-  def series(series)
+  def series
     @movies.select {|movie| movie.class == Series}
     end
 
