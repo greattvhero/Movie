@@ -62,7 +62,7 @@ class VideoCollection
   end
 
   def series(series)
-    @movies.select {|series| series.jenre.include?("TV")
+    @movies.select {|series| series.jenre.include?("TV")}
     end
 
   def my_method
