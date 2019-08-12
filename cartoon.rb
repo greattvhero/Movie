@@ -11,3 +11,7 @@ class Cartoon < Video
       super
   end
 end
+
+  def info
+    puts "I am Animation Movie"
+  end

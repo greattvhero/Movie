@@ -17,3 +17,7 @@ class Video
     @actor = actor
   end
 end
+
+ def info
+   puts "I am generic video"
+ end

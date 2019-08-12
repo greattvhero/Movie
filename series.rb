@@ -8,3 +8,7 @@ class Series < Video
     @seasons = seasons
   end
 end
+
+ def info
+   puts "I am TV Series"
+ end

@@ -8,3 +8,7 @@ class Film < Video
     @colors = colors
   end
 end
+
+  def info
+    puts "I am Film"
+  end
