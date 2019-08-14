@@ -58,7 +58,7 @@ class VideoCollection
   end
 
   def films
-    @movies.select {|movie| movie.class == Film}
+    @movies.select {|movie| movie.class == Film }
   end
 
   def series
