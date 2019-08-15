@@ -7,8 +7,8 @@ class Film < Video
     super
     @colors = colors
   end
-end
 
   def info
-    puts "I am Film"
+    print "I am Film"
   end
+end

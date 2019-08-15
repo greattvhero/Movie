@@ -16,8 +16,8 @@ class Video
     @director = director
     @actor = actor
   end
-end
 
  def info
-   puts "I am generic video"
+   print "I am generic video"
  end
+end

@@ -10,8 +10,8 @@ class Cartoon < Video
       end
       super
   end
-end
 
   def info
-    puts "I am Animation Movie"
+    print "I am Animation Movie"
   end
+end

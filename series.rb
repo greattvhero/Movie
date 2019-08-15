@@ -7,8 +7,8 @@ class Series < Video
     super
     @seasons = seasons
   end
-end
 
- def info
-   puts "I am TV Series"
- end
+  def info
+    print "I am TV Series"
+  end
+end
