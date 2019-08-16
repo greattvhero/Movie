@@ -17,4 +17,10 @@ video = Video.new(link: "http://imdb.com/title/tt0080684/?ref_=chttp_tt_12",
   showing: "1980-06-20",
   jenre: "Action,Adventure,Fantasy", length: "124 min", value: "8.8", director: "Irvin Kershner",
    actor: "Mark Hamill,Harrison Ford,Carrie Fisher")
-puts video.info
+
+cartoon = Cartoon.new(link: "http://imdb.com/title/tt0080684/?ref_=chttp_tt_12",
+  movie: "Star Wars: Episode V - The Empire Strikes Back", year: "1980", country: "USA",
+  showing: "1980-06-20",
+  jenre: "Action,Adventure,Fantasy", length: "124 min", value: "8.8", director: "Irvin Kershner",
+   actor: "Mark Hamill,Harrison Ford,Carrie Fisher", dimension: ["2D"])
+ puts cartoon.info
