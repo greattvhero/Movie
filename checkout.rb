@@ -1,5 +1,5 @@
 class Product
-  attr_accessor :cost, :product
+attr_accessor :cost, :product
 
   def initialize(cost:, product:)
     @cost = cost
@@ -8,11 +8,11 @@ class Product
 end
 
 class Checkout
-  def add(product)
-    puts "I'm adding #{product}"
+  def add(product, cost)
+    puts "I'm adding #{product} with #{cost}$"
   end
 
-  def sum
-    puts "I'm checking #{product}"
+  def sum(cost)
+    puts "I'm checking #{cost}$"
   end
 end

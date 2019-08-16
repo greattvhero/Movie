@@ -6,21 +6,22 @@ require_relative 'series'
 require_relative 'cartoon'
 require_relative 'video_collection'
 require_relative 'calculator'
+require_relative 'checkout'
 
-movie = Film.new(link: "http://imdb.com/title/tt0081505/?ref_=chttp_tt_58",
-movie: "The Shining", year: "1980", country: "USA", showing: "1980-05-23", jenre: "Horror",
-length: "146 min", value: "8.4", director: "Stanley Kubrick",
-actor: "Jack Nicholson,Shelley Duvall,Danny Lloyd", colors: "red")
+product = Product.new(cost: 10, product: "3 bottles of water")
+checkout = Checkout.new
+print checkout.add("3 bottles of water", 10)
+puts checkout.sum(10)
 
-video = Video.new(link: "http://imdb.com/title/tt0080684/?ref_=chttp_tt_12",
-  movie: "Star Wars: Episode V - The Empire Strikes Back", year: "1980", country: "USA",
-  showing: "1980-06-20",
-  jenre: "Action,Adventure,Fantasy", length: "124 min", value: "8.8", director: "Irvin Kershner",
-   actor: "Mark Hamill,Harrison Ford,Carrie Fisher")
+product_2 = Product.new(cost: 7, product: "5 packs of crisps")
+checkout_2 = Checkout.new
+print checkout.add("5 packs of crisps", 7)
+puts checkout.sum(7)
 
-cartoon = Cartoon.new(link: "http://imdb.com/title/tt0080684/?ref_=chttp_tt_12",
-  movie: "Star Wars: Episode V - The Empire Strikes Back", year: "1980", country: "USA",
-  showing: "1980-06-20",
-  jenre: "Action,Adventure,Fantasy", length: "124 min", value: "8.8", director: "Irvin Kershner",
-   actor: "Mark Hamill,Harrison Ford,Carrie Fisher", dimension: ["2D"])
- puts cartoon.info
+product_3 = Product.new(cost:30, product: "2 bars of chockolate")
+checkout_3 = Checkout.new
+print checkout.add("2 bars of chockolate", 30)
+puts checkout.sum(30)
+
+basket = "These cost #{10 + 7 + 30}$"
+puts basket
