@@ -5,6 +5,7 @@ class Product
     @cost = cost
     @product = product
   end
+end
 
 class Checkout
   def add(product)
