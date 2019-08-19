@@ -14,12 +14,12 @@ class Checkout
     @products = []
   end
 
-  #def add(product)
-    #@products.push(product)
+  def add(product)
+    @products.push(product)
     #puts "I'm adding #{product} with #{cost}$"
-  #end
+  end
 
-  #def sum
+  def sum
     #puts "I'm checking #{cost}$"
-  #end
+  end
 end
