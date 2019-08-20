@@ -8,7 +8,7 @@ require_relative 'video_collection'
 require_relative 'calculator'
 require_relative 'checkout'
 
-product = Product.new(cost: "10", product: "3 bottles of water")
+product = Product.new(cost: 10, product: "3 bottles of water")
 basket = Checkout.new
 basket.add(product)
 basket.sum
