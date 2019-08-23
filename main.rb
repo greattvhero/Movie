@@ -9,6 +9,10 @@ require_relative 'calculator'
 require_relative 'checkout'
 
 product = Product.new(cost: 10, product: "3 bottles of water")
+product_2 = Product.new(cost: 7, product: "5 packs of crisps")
+product_3 = Product.new(cost: 30, product: "2 bars of chockolate")
 basket = Checkout.new
 basket.add(product)
-basket.sum
+basket.add(product_2)
+basket.add(product_3)
+puts basket.sum

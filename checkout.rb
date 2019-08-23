@@ -20,6 +20,12 @@ class Checkout
   end
 
   def sum
+    total = @products.inject(0) {|total,x| total + x.cost}
+    if total > 100
+      total * 0.85
+    else
+      total
+    end
     #puts "I'm checking #{cost}$"
   end
 end
