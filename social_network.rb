@@ -3,17 +3,16 @@ class Profile
 
   def initialize(full_name:, birthdate:, gender:, city:, country:, phone:)
     @full_name = full_name
-    @birthdate = birthdate
-    if @birthdate.class(DateTime)
-      true
+    if @birthdate.class == DateTime
+      @birthdate = birthdate
     else
-      false
+      raise ArgumentError 'DateTime is not valid'
     end
-    @gender = gender
-    if @gender == male || female
-      true
+
+    if @gender.include?(male || female)
+        @gender = gender
     else
-      false
+      raise ArgumentError 'gender is not valid'
     end
     @city = city
     @country = country
@@ -21,30 +20,29 @@ class Profile
   end
 
 class SocialNetwork
-
+  attr_accessor :profile, :profiles
   def initialize
     @profile = profile
-    @profile = []
+    @profiles = []
   end
 
   def add(profile)
-    @profile.push(full_name, birthdate, gender)
-  end
+    @profiles.push(full_name, birthdate, gender)
 
-  def men
-    @profile.push(male)
-  end
+    def men
+      @profiles.select{|profile| profile.include?(male)}
+    end
 
-  def women
-    @profile.push(female)
-  end
+    def women
+      @profiles.select{|profile| profile.include?(female)}
+    end
 
-  def teenagers
-    @teenagers = teenagers
-    @profile.push(teenagers)
-  end
+    def teenagers
+      @profiles.select{|profile| profile.include?(teenagers)}
+    end
 
-  def grownups
-    @profile.push(gender)
+    def grownups
+      @profiles.select{|profile| profile.include?(grownups)}
+    end
   end
 end
