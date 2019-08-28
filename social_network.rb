@@ -8,7 +8,7 @@ class Profile
     else
       raise ArgumentError 'DateTime is not valid'
     end
-
+    @gender = [male || female]
     if @gender.include?(male || female)
         @gender = gender
     else
@@ -20,29 +20,28 @@ class Profile
   end
 
 class SocialNetwork
-  attr_accessor :profile, :profiles
   def initialize
     @profile = profile
-    @profiles = []
+    @profiles = [teenagers || grownups]
   end
 
   def add(profile)
-    @profiles.push(full_name, birthdate, gender)
+    @profiles.push(profile)
+  end
 
-    def men
-      @profiles.select{|profile| profile.include?(male)}
-    end
+  def men
+    @gender.select{|profile| profile.include?(male}
+  end
 
-    def women
-      @profiles.select{|profile| profile.include?(female)}
-    end
+  def women
+    @gender.select{|profile| profile.include?(female}
+  end
 
-    def teenagers
-      @profiles.select{|profile| profile.include?(teenagers)}
-    end
+  def teenagers
+    @profiles.select{|profile| profile.include?(teenagers}
+  end
 
-    def grownups
-      @profiles.select{|profile| profile.include?(grownups)}
-    end
+  def grownups
+    @profiles.select{|profile| profile.include?(grownups)}
   end
 end
