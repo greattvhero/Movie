@@ -8,7 +8,7 @@ class Profile
     else
       raise ArgumentError 'DateTime is not valid'
     end
-    GENDER = [male, female, teenager, grownups]
+    GENDER = ['male', 'female']
     if GENDER.include?(gender)
         @gender = gender
     else
