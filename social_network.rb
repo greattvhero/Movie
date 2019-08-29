@@ -8,8 +8,8 @@ class Profile
     else
       raise ArgumentError 'DateTime is not valid'
     end
-    @gender = [male || female]
-    if @gender.include?(male || female)
+    GENDER = [male, female, teenager, grownups]
+    if GENDER.include?(gender)
         @gender = gender
     else
       raise ArgumentError 'gender is not valid'
@@ -20,9 +20,10 @@ class Profile
   end
 
 class SocialNetwork
+
   def initialize
     @profile = profile
-    @profiles = [teenagers || grownups]
+    @profiles = []
   end
 
   def add(profile)
@@ -30,18 +31,18 @@ class SocialNetwork
   end
 
   def men
-    @gender.select{|profile| profile.include?(male}
+    @gender.select{|profile| profile.class == GENDER.include?(male)}
   end
 
   def women
-    @gender.select{|profile| profile.include?(female}
+    @gender.select{|profile| profile.class == GENDER.include?(female)}
   end
 
   def teenagers
-    @profiles.select{|profile| profile.include?(teenagers}
+    @gender.select{|profile| profile.class == GENDER.include?(teenagers)}
   end
 
   def grownups
-    @profiles.select{|profile| profile.include?(grownups)}
+    @profiles.select{|profile| profile.class == GENDER.include?(grownups)}
   end
 end
