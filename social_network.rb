@@ -46,3 +46,8 @@ class SocialNetwork
     @profiles.select{|profile| profile.class == GENDER.include?(grownups)}
   end
 end
+
+profile = Profile.new("Fedor Borislavovich Repeturov",
+  "11.03.1970",
+  'male', "Kiyiv", "Ucraine", "38-050-333-4256")
+social_network = SocialNetwork.new
