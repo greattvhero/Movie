@@ -49,5 +49,7 @@ end
 
 profile = Profile.new("Fedor Borislavovich Repeturov",
   "11.03.1970",
-  'male', "Kiyiv", "Ucraine", "38-050-333-4256")
+  'male', "Kyiv", "Ucraine", "38-050-333-4256")
+profile_2 = Profile.new("Borislav Ivanovich Shestenuk", "12.04.1984", 'male', "Kyiv", "Ukraine",
+"38-060-256-5637")
 social_network = SocialNetwork.new
