@@ -1,5 +1,6 @@
 class Profile
   attr_accessor :full_name, :birthdate, :gender, :city, :country, :phone
+  GENDER = ['male', 'female']
 
   def initialize(full_name:, birthdate:, gender:, city:, country:, phone:)
     @full_name = full_name
@@ -8,7 +9,6 @@ class Profile
     else
       raise ArgumentError 'DateTime is not valid'
     end
-    GENDER = ['male', 'female']
     if GENDER.include?(gender)
         @gender = gender
     else
@@ -18,6 +18,7 @@ class Profile
     @country = country
     @phone = phone
   end
+end
 
 class SocialNetwork
 
@@ -47,9 +48,12 @@ class SocialNetwork
   end
 end
 
-profile = Profile.new("Fedor Borislavovich Repeturov",
-  "11.03.1970",
-  'male', "Kyiv", "Ucraine", "38-050-333-4256")
-profile_2 = Profile.new("Borislav Ivanovich Shestenuk", "12.04.1984", 'male', "Kyiv", "Ukraine",
-"38-060-256-5637")
+profile = Profile.new(full_name: "Fedor Borislavovich Repeturov",
+  birthdate: "11.03.1970",
+  gender: 'male', city: "Kyiv", country: "Ucraine", phone: "38-050-333-4256")
+profile_2 = Profile.new(full_name: "Borislav Ivanovich Shestenuk", birthdate: "12.04.1984",
+  gender: 'male', city: "Kyiv", country: "Ukraine",
+phone: "38-060-256-5637")
 social_network = SocialNetwork.new
+
+puts profile
