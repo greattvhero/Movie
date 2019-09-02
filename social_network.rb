@@ -1,10 +1,12 @@
+require 'date'
+
 class Profile
   attr_accessor :full_name, :birthdate, :gender, :city, :country, :phone
   GENDER = ['male', 'female']
 
   def initialize(full_name:, birthdate:, gender:, city:, country:, phone:)
     @full_name = full_name
-    if @birthdate.class == DateTime
+    if @birthdate.class == ::DateTime.parse("11.03.1970")
       @birthdate = birthdate
     else
       raise ArgumentError 'DateTime is not valid'
