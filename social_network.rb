@@ -6,7 +6,7 @@ class Profile
 
   def initialize(full_name:, birthdate:, gender:, city:, country:, phone:)
     @full_name = full_name
-    if @birthdate.class == ::DateTime.parse("11.03.1970")
+    if @birthdate.class == ::DateTime
       @birthdate = birthdate
     else
       raise ArgumentError 'DateTime is not valid'
@@ -51,9 +51,9 @@ class SocialNetwork
 end
 
 profile = Profile.new(full_name: "Fedor Borislavovich Repeturov",
-  birthdate: "11.03.1970",
+  birthdate: ::DateTime.parse("11.03.1970"),
   gender: 'male', city: "Kyiv", country: "Ucraine", phone: "38-050-333-4256")
-profile_2 = Profile.new(full_name: "Borislav Ivanovich Shestenuk", birthdate: "12.04.1984",
+profile_2 = Profile.new(full_name: "Borislav Ivanovich Shestenuk", birthdate: ::DateTime.parse("12.04.1984"),
   gender: 'male', city: "Kyiv", country: "Ukraine",
 phone: "38-060-256-5637")
 social_network = SocialNetwork.new
