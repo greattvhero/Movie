@@ -9,7 +9,7 @@ class Profile
     if @birthdate.class == ::DateTime
       @birthdate = birthdate
     else
-      raise ArgumentError 'DateTime is not valid'
+      raise ArgumentError, 'DateTime is not valid'
     end
     if GENDER.include?(gender)
         @gender = gender
