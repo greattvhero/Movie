@@ -41,11 +41,11 @@ class SocialNetwork
   end
 
   def teenagers
-    @profiles.select{|profile| profile.birthdate < Date.parse("28.03.2001")}
+    @profiles.select{|profile| profile.birthdate > Date.parse("28.03.2001")}
   end
 
   def grownups
-    @profiles.select{|profile| profile.birthdate > Date.parse("28.03.2001")}
+    @profiles.select{|profile| profile.birthdate < Date.parse("28.03.2001")}
   end
 end
 
@@ -64,6 +64,19 @@ profile_4 = Profile.new(full_name: "Lola Fedorovna Oxxymironova",
 profile_5 = Profile.new(full_name: "Bogdan Leonidovich Padun",
   birthdate: ::DateTime.parse("04.10.1998"),
   gender: 'male', city: "Kyiv", country: "Ucraine", phone: "38-050-333-4256")
-social_network = SocialNetwork.new
 
+social_network = SocialNetwork.new
+social_network.add('female')
 puts social_network.women.inspect
+
+social_network_2 = SocialNetwork.new
+social_network.add('male')
+puts social_network.men.inspect
+
+social_network_3 = SocialNetwork.new
+social_network.add.Date.parse("28.03.2010")
+puts social_network.teenagers.inspect
+
+social_network_4 = SocialNetwork.new
+social_network.add.Date.parse("28.03.1999")
+puts social_network.grownups.inspect
