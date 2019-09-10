@@ -1,31 +1,30 @@
-class Product
-  attr_accessor :cost, :product
+class Calculator
 
-  def initialize(cost:, product:)
-    @cost = cost
-    @product = product
-  end
-end
-
-class Checkout
-  attr_accessor :products
-
-  def initialize
-    @products = []
+  def sum(x,y)
+    check_types!(x,y)
+    x + y
   end
 
-  def add(product)
-    @products.push(product)
-    #puts "I'm adding #{product} with #{cost}$"
+  def div(x,y)
+    check_types!(x,y)
+    x / y
   end
 
-  def sum
-    total = @products.inject(0) {|total,x| total + x.cost}
-    if total > 100
-      total * 0.85
-    else
-      total
-    end
-    #puts "I'm checking #{cost}$"
+  def multiply(x,y)
+    check_types!(x,y)
+    x * y
+  end
+
+  def substract(x,y)
+    check_types!(x,y)
+    x - y
+  end
+
+  def eql(x,y)
+    x == y
+  end
+
+  def check_types!(x,y)
+    raise ArgumentError, 'not a number' if x.class != Integer && y.class != Integer
   end
 end

@@ -1,73 +1,34 @@
 # frozen_string_literal: true
 
 # movie operations class
-class VideoCollection
-  attr_accessor :file
 
-  def initialize(file)
-    @file = file
-    @movies = []
-    read_file
+class Calculator
+
+  def sum(x,y)
+    check_types!(x,y)
+    x + y
   end
 
-  def read_file
-    File.readlines(@file).each do |line|
-      params = line.split('|')
-      new_movie = ::Video.new(link: params[0], movie: params[1], year: params[2],
-         country: params[3],
-        showing: params[4], jenre: params[5], length: params[6], value: params[7],
-        director: params[8], actor: params[9], colors: params[10])
-      @movies.push(new_movie)
-    end
+  def div(x,y)
+    check_types!(x,y)
+    x / y
   end
 
-  def all
-    @movies
+  def multiply(x,y)
+    check_types!(x,y)
+    x * y
   end
 
-  def add(object)
-    @movies.push(object)
+  def substract(x,y)
+    check_types!(x,y)
+    x - y
   end
 
-  def sort_by(year)
-    @movies.sort_by { |movie| movie.send(year) }
+  def eql(x,y)
+    x == y
   end
 
-  def filter(jenre)
-    @movies.select { |movie| movie.jenre.include?(jenre) }
-  end
-
-  def stats
-    statistics_data = {}
-    @movies.each do |title|
-      statistics_data.key?(title.director) ?
-      statistics_data[title.director] += 1 :
-      statistics_data[title.director] = 1
-    end
-    statistics_data
-  end
-
-  def genre?(jenre)
-    @movies.select do |movie|
-      movie.jenre.include?(jenre) || raise('Some Exception')
-    end
-  end
-
-  def cartoons
-    @movies.select {|movie| movie.class == Cartoon}
-  end
-
-  def films
-    @movies.select {|movie| movie.class == Film }
-  end
-
-  def series
-    @movies.select {|movie| movie.class == Series}
-    end
-
-  def my_method
-    my_hash = {}
-    my_hash[:a] = 1
-    my_hash
+  def check_types!(x,y)
+    raise ArgumentError, 'not a number' if x.class != Integer && y.class != Integer
   end
 end
